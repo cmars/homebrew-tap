@@ -1,21 +1,21 @@
 class DistransCli < Formula
   desc "Anonymous decentralized file distribution and transfer"
   homepage "https://github.com/cmars/distrans"
-  version "0.3.9"
+  version "0.3.10"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.9/distrans_cli-aarch64-apple-darwin.tar.gz"
-      sha256 "867b2d68493b5df33db708e48e94afd51a13724aa82df180246522738e13c719"
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.10/distrans_cli-aarch64-apple-darwin.tar.gz"
+      sha256 "98b8034de97459ea3deb1f28cd5fc83395ca6603910e96de8dbc04a9fef14895"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.9/distrans_cli-x86_64-apple-darwin.tar.gz"
-      sha256 "9c16873bfa318ee9c3c07c3abdbd5b1feca0110dfb35a9fc5ed1e46493544bbd"
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.10/distrans_cli-x86_64-apple-darwin.tar.gz"
+      sha256 "42b38a82b96bb2cfcfbb7e3203be7d3da2c7f7c5d126a2a1118d32c3b9ed0bfa"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.9/distrans_cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "59f96a57ae881b36288224a485932224ab7ac4c366010e044114a22a55ced517"
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.10/distrans_cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "3a707daa640d607c3594f3dc6b2f8d28dc119a04b70426de19443f6a86fc74ee"
     end
   end
   license "MPL-2.0"
