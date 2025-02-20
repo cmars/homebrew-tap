@@ -1,25 +1,32 @@
 class DistransCli < Formula
   desc "Anonymous decentralized file distribution and transfer"
   homepage "https://github.com/cmars/distrans"
-  version "0.3.17"
+  version "0.3.18"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.17/distrans_cli-aarch64-apple-darwin.tar.gz"
-      sha256 "72e90803e1d19cd2b547956954ef313cf9c63694fc8fa210f3258d66d715c17a"
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.18/distrans_cli-aarch64-apple-darwin.tar.gz"
+      sha256 "6e208942de7ce1c645352051dd3b290a66595b724b3c564225a5d0118fc2261f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.17/distrans_cli-x86_64-apple-darwin.tar.gz"
-      sha256 "eb83b5c3fa19e187a5055f15f2cd530d52219865a13f18d5653ad8642c54b971"
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.18/distrans_cli-x86_64-apple-darwin.tar.gz"
+      sha256 "10663bc23728a1c5dd4bee8331b930e0eb47d16e5d17d9a1e357cb750fef211b"
     end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.17/distrans_cli-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "c8398d489a8bdc323a62c4d278bc56126cb67d009db33a678cc5981169b7d665"
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.18/distrans_cli-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "2275d21fcac292232874b7b1f497a0666f5ba2c50143e1039df038b6b129b310"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.18/distrans_cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bbdba1506a8c9feaa5810df6070f869cd962dd6c3e44f3a9de089fddfacd076e"
+    end
   end
   license "MPL-2.0"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
+    "aarch64-unknown-linux-gnu":         {},
     "x86_64-apple-darwin":               {},
     "x86_64-pc-windows-gnu":             {},
     "x86_64-unknown-linux-gnu":          {},
@@ -45,6 +52,7 @@ class DistransCli < Formula
   def install
     bin.install "distrans" if OS.mac? && Hardware::CPU.arm?
     bin.install "distrans" if OS.mac? && Hardware::CPU.intel?
+    bin.install "distrans" if OS.linux? && Hardware::CPU.arm?
     bin.install "distrans" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
