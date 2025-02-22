@@ -1,25 +1,25 @@
 class DistransCli < Formula
   desc "Anonymous decentralized file distribution and transfer"
   homepage "https://github.com/cmars/distrans"
-  version "0.3.18"
+  version "0.3.19"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.18/distrans_cli-aarch64-apple-darwin.tar.gz"
-      sha256 "6e208942de7ce1c645352051dd3b290a66595b724b3c564225a5d0118fc2261f"
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.19/distrans_cli-aarch64-apple-darwin.tar.gz"
+      sha256 "c1c436cb72878f48d76d571f211d054b205979092855538f47ccbeab8fedb2f5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.18/distrans_cli-x86_64-apple-darwin.tar.gz"
-      sha256 "10663bc23728a1c5dd4bee8331b930e0eb47d16e5d17d9a1e357cb750fef211b"
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.19/distrans_cli-x86_64-apple-darwin.tar.gz"
+      sha256 "299ceef8efcf4a923c88424de5585fd1506c165c98478bb8b852cbf309fe51c7"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.18/distrans_cli-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "2275d21fcac292232874b7b1f497a0666f5ba2c50143e1039df038b6b129b310"
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.19/distrans_cli-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "a56b8644970331b54a7fc0727de68ee5015b08b06977dfa0917b2fe41f342301"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.18/distrans_cli-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bbdba1506a8c9feaa5810df6070f869cd962dd6c3e44f3a9de089fddfacd076e"
+      url "https://github.com/cmars/distrans/releases/download/distrans_cli-v0.3.19/distrans_cli-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6edbf3c13018ab4b7c58a4343307acf1e04c7059a97fca627faee612319e64b4"
     end
   end
   license "MPL-2.0"
