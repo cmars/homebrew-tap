@@ -1,25 +1,25 @@
 class Stigmerge < Formula
   desc "Anonymous decentralized file distribution and transfer"
   homepage "https://github.com/cmars/stigmerge"
-  version "0.5.3"
+  version "0.5.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.3/stigmerge-aarch64-apple-darwin.tar.gz"
-      sha256 "bdf5a19638ae61103c6fc668936bf8168583895d80a67e47b8b20061dbc77390"
+      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.4/stigmerge-aarch64-apple-darwin.tar.gz"
+      sha256 "4fe0fe4a5f73143a9f8cdbce13490f4a14eca0a9d642ca751b11a38caa515dd1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.3/stigmerge-x86_64-apple-darwin.tar.gz"
-      sha256 "b0795bbf0b1ab5da2ae8ba4f859403463b25d7429e4a93f915e854be90540b0e"
+      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.4/stigmerge-x86_64-apple-darwin.tar.gz"
+      sha256 "1fe4af8df1028389b379a6ac6bd287605c2f03f0e697d7f046aba89ac45d5a65"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.3/stigmerge-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ea145424afa0f91a4ea7bee064654719acc48c6d1017abb380e9f19bfa0441d3"
+      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.4/stigmerge-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "6fceefe39e8ab45eda3b241ff7619f70e8e8606fff538bb8eb0aec40171c442c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.3/stigmerge-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e2c19a25309b140cc47112e4b877752b51d96930f15b1319c195f07cbca6156f"
+      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.4/stigmerge-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "292cd2cf1ab641838ca37584a470be8ed116317a5bc2449cc3f478d527153aa4"
     end
   end
   license "MPL-2.0"
