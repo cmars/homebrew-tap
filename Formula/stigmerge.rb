@@ -1,25 +1,25 @@
 class Stigmerge < Formula
   desc "Anonymous decentralized file distribution and transfer"
   homepage "https://github.com/cmars/stigmerge"
-  version "0.5.10"
+  version "0.5.11"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.10/stigmerge-aarch64-apple-darwin.tar.gz"
-      sha256 "818c241b4c460bfd8195e59fe6ecd23b3059cde68d1c25b77565ccdb33ae03ce"
+      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.11/stigmerge-aarch64-apple-darwin.tar.gz"
+      sha256 "9946f0caf50656a3fc753e3dbd229b6eaa5a3d6dc0547718066a7e5aee27bfae"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.10/stigmerge-x86_64-apple-darwin.tar.gz"
-      sha256 "b219864c7133d93bc25c132f4e8adf6452bb2fadbcba6bdb3a51c5b1fe026403"
+      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.11/stigmerge-x86_64-apple-darwin.tar.gz"
+      sha256 "7b3f8bc17fe9d2f2f42e2c13d705b976dc152c36b6ccb2ac727b167c9f284cf5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.10/stigmerge-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b7627aaccafe3344ee9a605b9be244d5eca24bd4bf6390fbd59bcbf5ab0c373c"
+      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.11/stigmerge-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "bd34f4bffed3d57787b520112d8cd1436d931e263979ecb18c6a0c33b162822a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.10/stigmerge-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ad72ee4324996627dd3738f41c6c6f9f851f08ebda22029f9c73b59876e79344"
+      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.11/stigmerge-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "a772e3b240e4b06127e73aeafc55e5f27f0572f48bc7080a8b99dc9b6ef8de32"
     end
   end
   license "MPL-2.0"
