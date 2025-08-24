@@ -1,25 +1,19 @@
 class Stigmerge < Formula
   desc "Anonymous decentralized file distribution and transfer"
   homepage "https://github.com/cmars/stigmerge"
-  version "0.5.11"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.11/stigmerge-aarch64-apple-darwin.tar.gz"
-      sha256 "9946f0caf50656a3fc753e3dbd229b6eaa5a3d6dc0547718066a7e5aee27bfae"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.11/stigmerge-x86_64-apple-darwin.tar.gz"
-      sha256 "7b3f8bc17fe9d2f2f42e2c13d705b976dc152c36b6ccb2ac727b167c9f284cf5"
-    end
+  version "0.5.12"
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.12/stigmerge-aarch64-apple-darwin.tar.gz"
+    sha256 "cbb2cbb6a9a47a19e9819c13ef4e8ca6c5cf5760a8cf202a54f7f304d2ded13f"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.11/stigmerge-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "bd34f4bffed3d57787b520112d8cd1436d931e263979ecb18c6a0c33b162822a"
+      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.12/stigmerge-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "39e7c8c8cf6dc43aa03d23e831414792031c944427dcf14518422671fe2d3a81"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.11/stigmerge-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a772e3b240e4b06127e73aeafc55e5f27f0572f48bc7080a8b99dc9b6ef8de32"
+      url "https://github.com/cmars/stigmerge/releases/download/stigmerge-v0.5.12/stigmerge-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "b904ed601b6536ad436fb9e45a49c1b8fd3cdf8cb62a8bd78cb047c6106832d7"
     end
   end
   license "MPL-2.0"
@@ -27,7 +21,6 @@ class Stigmerge < Formula
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
     "aarch64-unknown-linux-gnu":         {},
-    "x86_64-apple-darwin":               {},
     "x86_64-pc-windows-gnu":             {},
     "x86_64-unknown-linux-gnu":          {},
     "x86_64-unknown-linux-musl-dynamic": {},
@@ -51,7 +44,6 @@ class Stigmerge < Formula
 
   def install
     bin.install "stigmerge" if OS.mac? && Hardware::CPU.arm?
-    bin.install "stigmerge" if OS.mac? && Hardware::CPU.intel?
     bin.install "stigmerge" if OS.linux? && Hardware::CPU.arm?
     bin.install "stigmerge" if OS.linux? && Hardware::CPU.intel?
 
